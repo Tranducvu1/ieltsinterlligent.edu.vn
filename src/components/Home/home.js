@@ -1,9 +1,28 @@
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import Home from './home.css';
+import { BrowserRouter as Router, Switch,Link } from "react-router-dom";
+import Home from '../Home/home';
+import Head from '../Header/header'
 import { Route } from "react-router";
 
 function App() {
-    return ( <p> Hello hihi </p>);
+    return (  
+        <Router>
+           
+            <dir>
+                <Link to='/'>Home</Link>
+                <Link to='/header'>Header</Link>
+            </dir>
+            <Switch>
+                <Route exact path='/'>
+                    <Home>
+                    <p> Hellolol</p>
+                    </Home>
+                </Route>
+                <Route path='header'>
+                    <Head/>
+                </Route>
+            </Switch>
+        </Router>
+        );
 
     }
     export default App;

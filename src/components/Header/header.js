@@ -1,5 +1,7 @@
 import React from "react";
-export default function abc() {
-    return ( <div>Hello</div>
-    )
+function Header(){
+    return(
+        <p>Hello Header</p>
+    );
 }
+export default Header;
