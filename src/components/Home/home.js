@@ -1,25 +1,35 @@
 import { BrowserRouter as Router, Switch,Link } from "react-router-dom";
-import Home from '../Home/home';
-import Head from '../Header/header'
+import Head from '../Header/header';
+import Contact  from '../Contact/contact'
 import { Route } from "react-router";
 
 function App() {
     return (  
         <Router>
-           
-            <dir>
-                <Link to='/'>Home</Link>
-                <Link to='/header'>Header</Link>
-            </dir>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/head">Head</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <Switch>
-                <Route exact path='/'>
-                    <Home>
-                    <p> Hellolol</p>
-                    </Home>
-                </Route>
-                <Route path='header'>
-                    <Head/>
-                </Route>
+                  <Route exact path='/'>
+                  </Route>
+                  <Route path='/head'>
+                    <Head />
+                  </Route>
+                  <Route path='/contact'>
+                    <Contact/>
+                  </Route>
             </Switch>
         </Router>
         );
